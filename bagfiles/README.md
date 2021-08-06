@@ -12,7 +12,7 @@ rosbag record /topicA /topicB [-o bagName]
 
 即可监听topicA、topicB话题下发布的信息
 
-其后可选参数为生成的.bag文件命名， -o 会生成bagName-YYYY-MM-DD-HH-M-SS.bag而 -O则不含有时间信息
+其后可选参数为生成的.bag文件命名， -o 会生成bagName-YYYY-MM-DD-HH-M-SS.bag而 -O则不含有时间信息, 不填可选参数则bag名称只含有时间
 
 - 查看已创建.bag文件信息，执行
 
