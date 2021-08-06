@@ -1,14 +1,7 @@
 #!/bin/bash
 
-# generate GUI.desktop
-echo "[Desktop Entry]
-Encoding=UTF-8 
-Name=Anesthesia Monitor
-Exec=$(pwd)/GUIMonitor.sh
-Icon=$(pwd)/monitor.ico
-Terminal=true
-StartupNotify=true
-Type=Application">GUI.desktop
+# run rosbag
+# rosbag record /anesthesia_info0
 
 # run roscore
 source /opt/ros/noetic/setup.bash
@@ -26,3 +19,4 @@ bash GUI.sh
 
 cd build-SmartAn-Desktop_Qt_5_14_2_GCC_64bit-Debug
 ./SmartAn
+
