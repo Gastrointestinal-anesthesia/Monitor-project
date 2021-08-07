@@ -4,8 +4,6 @@
 - 在当前目录下打开终端，执行
 
 
-
-
 ```
 rosbag record /topicA /topicB [-o bagName] 
 ```
@@ -23,16 +21,11 @@ rosbag info bagName.bag
 
 - 在当前目录下打开终端，执行
 
+```
 rosbag play bagName.bag
 ```
-
-
-```
-rosbag play bagName.bag --topic /topicA /topicB
-即可回放rosbag内所有topic
 - 指定topic
 ```
-
+rosbag play bagName.bag --topic /topicA /topicB
 ```
-
 
