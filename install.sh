@@ -1,11 +1,15 @@
 #!/bin/bash
 
-sudo apt install pip
-pip3 install hl7parser
-pip3 install sockets
-pip3 install rospy
+# build workspace
+cd /Qt-interface/SmartMessage
+catkin_make
+cd ..
+cd ..
+cd /DataReceiver
+catkin_make
+cd ..
 
-
+# change mode
 chmod 777 /DataReceiver/dataReceiver.sh
 chmod 777 /DataReceiver/src/monitor/scripts/main.py
 chmod 777 /Qt-interface/GUI.sh
@@ -22,9 +26,6 @@ Terminal=true
 StartupNotify=true
 Type=Application">GUI.desktop
 
-sudo cp $(pwd)/GUI.desktop /usr/share/applications
-rm $(pwd)/GUI.desktop
-cd 
+sudo mv /GUI.desktop /usr/share/applications
 chmod 777 /usr/share/applications/GUI.desktop
-chown lab129 /usr/share/applications/GUI.desktop
 
