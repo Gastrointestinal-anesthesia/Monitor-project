@@ -1,19 +1,19 @@
 #!/bin/bash
 
+sudo apt install python3-pip
+pip3 install -r requirements.txt
+
 # build workspace
 cd Qt-interface/SmartMessage
 catkin_make
-cd ..
-cd ..
-cd DataReceiver
+cd ../../DataReceiver
 catkin_make
 cd ..
 
 # change mode
-chmod 777 DataReceiver/dataReceiver.sh
-chmod 777 DataReceiver/src/monitor/scripts/main.py
-chmod 777 Qt-interface/GUI.sh
-chmod 777 Qt-interface/SmartMessage/src/smart_topic/src/anesthesia_subscriber.cpp
+chmod +x DataReceiver/dataReceiver.sh
+chmod +x DataReceiver/src/monitor/scripts/main.py
+chmod +x Qt-interface/GUI.sh
 
 # generate GUI.desktop
 echo "[Desktop Entry]
@@ -24,8 +24,7 @@ Exec=$(pwd)/GUIMonitor.sh
 Icon=$(pwd)/monitor.ico
 Terminal=true
 StartupNotify=true
-Type=Application">GUI.desktop
+Type=Application">Anesthesia.desktop
 
-sudo mv GUI.desktop /usr/share/applications
-chmod 777 /usr/share/applications/GUI.desktop
+sudo mv Anesthesia.desktop /usr/share/applications
 

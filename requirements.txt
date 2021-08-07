@@ -1,5 +1,2 @@
-# Packages you need to run the system
-sudo apt install pip
-pip3 install hl7parser
-pip3 install rospy
+hl7parser
 
