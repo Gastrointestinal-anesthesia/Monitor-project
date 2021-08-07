@@ -1,0 +1,6 @@
+[submodule "DataReceiver"]
+	path = DataReceiver
+	url = https://github.com/Gastrointestinal-anesthesia/DataReceiver.git
+[submodule "Qt-interface"]
+	path = Qt-interface
+	url = https://github.com/Gastrointestinal-anesthesia/Qt-interface.git
