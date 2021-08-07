@@ -1,11 +1,14 @@
 #!/bin/bash
 
 # run rosbag
-# rosbag record /anesthesia_info0
+
 
 # run roscore
 source /opt/ros/noetic/setup.bash
 gnome-terminal -t "roscore" -x bash -c "roscore"
+
+cd /bagfiles
+gnome-terminal -t "rosbag" -x bash -c "rosbag record /anesthesia_info0"
 
 sleep 1s
 

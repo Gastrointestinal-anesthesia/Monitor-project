@@ -12,6 +12,10 @@ StartupNotify=true
 Type=Application">GUI.desktop
 
 chmod 777 GUIMonitor.sh
+chmod 777 /DataReceiver/dataReceiver.sh
+chmod 777 /DataReceiver/src/monitor/scripts/main.py
+chmod 777 /Qt-interface/GUI.sh
+chmod 777 /Qt-interface/SmartMessage/src/smart_topic/src/anesthesia_subscriber.sh
 
 sudo cp $(pwd)/GUI.desktop /usr/share/applications
 rm $(pwd)/GUI.desktop
