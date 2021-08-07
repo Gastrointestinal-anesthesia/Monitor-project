@@ -8,8 +8,8 @@ gnome-terminal -t "roscore" -x bash -c "roscore"
 sleep 1s
 
 # run rosbag according to para
-if [ $1 = "r" ] ; then
-	cd /bagfiles
+if [ $1 == "r" ] ; then
+	cd bagfiles
 	gnome-terminal -t "rosbag" -x bash -c "rosbag record /anesthesia_info0"
 	echo "rosbag Enabled"
 else
@@ -17,11 +17,12 @@ else
 fi
 
 # run other nodes
-cd /DataReceiver
+cd Monitor-project/DataReceiver
 bash dataReceiver.sh
 
 cd ..
-cd /Qt-interface
+
+cd Qt-interface
 bash GUI.sh
 
 # now dont have this

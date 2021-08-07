@@ -5,7 +5,7 @@ cd Qt-interface/SmartMessage
 catkin_make
 cd ..
 cd ..
-cd DataReceiver/
+cd DataReceiver
 catkin_make
 cd ..
 
@@ -13,7 +13,7 @@ cd ..
 chmod 777 DataReceiver/dataReceiver.sh
 chmod 777 DataReceiver/src/monitor/scripts/main.py
 chmod 777 Qt-interface/GUI.sh
-chmod 777 Qt-interface/SmartMessage/src/smart_topic/src/anesthesia_subscriber.sh
+chmod 777 Qt-interface/SmartMessage/src/smart_topic/src/anesthesia_subscriber.cpp
 
 # generate GUI.desktop
 echo "[Desktop Entry]
