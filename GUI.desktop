@@ -1,9 +1,0 @@
-[Desktop Entry]
-# Encoding=UTF-8 
-Name=Anesthesia Monitor
-Comment=Monitor
-Exec=/home/lab129/Monitor-project/GUIMonitor.sh
-Icon=/home/lab129/Monitor-project/monitor.ico
-Terminal=true
-StartupNotify=true
-Type=Application
