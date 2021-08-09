@@ -3,10 +3,16 @@
 sudo apt install python3-pip
 pip3 install -r requirements.txt
 
-# build workspace
-cd Qt-interface/SmartMessage
+# build workspace, remove CmakeLists.txt due to the risk of wrong version info of ROS
+cd Qt-interface/SmartMessage/src
+rm CMakeLists.txt
+catkin_init_workspace
+cd ..
 catkin_make
-cd ../../DataReceiver
+cd ../../DataReceiver/src
+rm CMakeLists.txt
+catkin_init_workspace
+cd ..
 catkin_make
 cd ..
 
@@ -18,13 +24,15 @@ chmod +x Qt-interface/GUI.sh
 # generate GUI.desktop
 echo "[Desktop Entry]
 # Encoding=UTF-8 
-Name=Anesthesia Monitor
-Comment=Monitor
+Name=Anes-Bot
+Comment=Anesthesia Monitor
 Exec=$(pwd)/GUIMonitor.sh
-Icon=$(pwd)/monitor.ico
+Icon=$(pwd)/logo.png
 Terminal=true
 StartupNotify=true
 Type=Application">Anesthesia.desktop
 
 sudo mv Anesthesia.desktop /usr/share/applications
+
+sed -i "4c cd $(pwd)" GUIMonitor.sh
 
